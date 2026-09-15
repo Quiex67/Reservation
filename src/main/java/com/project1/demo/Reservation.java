@@ -1,0 +1,26 @@
+package com.project1.demo;
+
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Null;
+
+import java.time.LocalDate;
+
+public record Reservation(
+        @Null
+        Long id,
+        @NotNull
+        Long userId,
+        @NotNull
+        Long RoomId,
+        @FutureOrPresent
+        @NotNull
+        LocalDate startDate,
+        @FutureOrPresent
+        @NotNull
+        LocalDate endDate,
+        ReservationStatus status
+) {
+
+
+}
